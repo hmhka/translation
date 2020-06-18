@@ -1,0 +1,20 @@
+cd "C:\vimeo-files\Lectures Text\amruta_lectures"
+
+Get-Content *.txt | measure -Line -Character -Word
+
+
+**********************
+for automatic download of html page
+
+wget https://www.amruta.org/1979/01/09/what-is-the-kundalini-and-how-it-awakens-hindi-mumbai-1979/ -OutFile c:\temp\abc1.html 
+
+****** IS WORKING *********
+"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"  --user-data-dir="C:\Users\YOUR-USERNAME\AppData\Local\Google\Chrome\UserDataFIL"  --lang=fil https://www.amruta.org/1979/01/09/what-is-the-kundalini-and-how-it-awakens-hindi-mumbai-1979/
+******
+
+****************
+https://support.google.com/chrome/forum/AAAAP1KN0B0L_lzgshpWbY
+"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"  --user-data-dir="C:\Users\YOUR-USERNAME\AppData\Local\Google\Chrome\UserDataEN"  --lang=en &
+
+"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"  --user-data-dir="C:\Users\YOUR-USERNAME\AppData\Local\Google\Chrome\UserDataDE"  --lang=de
+****************

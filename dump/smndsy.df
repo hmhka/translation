@@ -1,0 +1,637 @@
+ADD SEQUENCE "language-code"
+  INITIAL 0
+  INCREMENT 1
+  CYCLE-ON-LIMIT no
+
+ADD TABLE "languages"
+  AREA "Schema Area"
+  DUMP-NAME "languages"
+  TABLE-TRIGGER "CREATE" NO-OVERRIDE PROCEDURE "C:\pvr\translation\next-language-code.p" CRC "30786" 
+
+ADD FIELD "language-code" OF "languages" AS integer 
+  FORMAT "->,>>>,>>9"
+  INITIAL "0"
+  LABEL "Cdoe"
+  POSITION 2
+  MAX-WIDTH 4
+  ORDER 10
+
+ADD FIELD "language-name" OF "languages" AS character 
+  FORMAT "x(8)"
+  INITIAL ""
+  LABEL "Language Name"
+  POSITION 3
+  MAX-WIDTH 16
+  ORDER 20
+
+ADD FIELD "language-abbr" OF "languages" AS character 
+  FORMAT "x(8)"
+  INITIAL ""
+  LABEL "Abbr"
+  POSITION 4
+  MAX-WIDTH 16
+  ORDER 30
+
+ADD FIELD "iso" OF "languages" AS character 
+  FORMAT "x(8)"
+  INITIAL ""
+  LABEL "ISO"
+  POSITION 5
+  MAX-WIDTH 16
+  ORDER 40
+
+ADD INDEX "idx" ON "languages" 
+  AREA "Schema Area"
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "language-code" ASCENDING 
+
+ADD TABLE "lectures"
+  AREA "Schema Area"
+  DUMP-NAME "lectures"
+
+ADD FIELD "lectures-code" OF "lectures" AS integer 
+  FORMAT "->,>>>,>>9"
+  INITIAL "0"
+  LABEL "Code"
+  POSITION 2
+  MAX-WIDTH 4
+  ORDER 10
+
+ADD FIELD "lectures-date-txt" OF "lectures" AS character 
+  FORMAT "x(10)"
+  INITIAL ""
+  LABEL "Date Text"
+  POSITION 3
+  MAX-WIDTH 16
+  ORDER 20
+
+ADD FIELD "lectures-country" OF "lectures" AS character 
+  FORMAT "x(50)"
+  INITIAL ""
+  LABEL "Country"
+  POSITION 6
+  MAX-WIDTH 100
+  ORDER 50
+
+ADD FIELD "lectures-city" OF "lectures" AS character 
+  FORMAT "x(50)"
+  INITIAL ""
+  LABEL "City"
+  POSITION 7
+  MAX-WIDTH 100
+  ORDER 60
+
+ADD FIELD "lectures-eng-trans" OF "lectures" AS character 
+  FORMAT "x(20)"
+  INITIAL ""
+  LABEL "Eng Transcript"
+  POSITION 8
+  MAX-WIDTH 40
+  ORDER 70
+
+ADD FIELD "lectures-hindi-trans" OF "lectures" AS character 
+  FORMAT "x(20)"
+  INITIAL ""
+  LABEL "Hindi Transcript"
+  POSITION 9
+  MAX-WIDTH 40
+  ORDER 80
+
+ADD FIELD "lectures-marathi-trans" OF "lectures" AS character 
+  FORMAT "x(20)"
+  INITIAL ""
+  LABEL "Marathi Trans"
+  POSITION 10
+  MAX-WIDTH 40
+  ORDER 90
+
+ADD FIELD "lectures-trans-from-marathi" OF "lectures" AS character 
+  FORMAT "x(20)"
+  INITIAL ""
+  LABEL "Trans from Marathi"
+  POSITION 11
+  MAX-WIDTH 40
+  ORDER 100
+
+ADD FIELD "lectures-trans-from-hindi" OF "lectures" AS character 
+  FORMAT "x(20)"
+  INITIAL ""
+  LABEL "Trans from Hindi"
+  POSITION 12
+  MAX-WIDTH 40
+  ORDER 110
+
+ADD FIELD "lectures-type" OF "lectures" AS character 
+  FORMAT "x(20)"
+  INITIAL ""
+  LABEL "Type"
+  POSITION 16
+  MAX-WIDTH 40
+  ORDER 181
+
+ADD FIELD "lectures-audio" OF "lectures" AS logical 
+  FORMAT "yes/no"
+  INITIAL "no"
+  LABEL "Audio"
+  POSITION 17
+  MAX-WIDTH 1
+  ORDER 160
+
+ADD FIELD "lectures-video" OF "lectures" AS logical 
+  FORMAT "yes/no"
+  INITIAL "no"
+  LABEL "Video"
+  POSITION 18
+  MAX-WIDTH 1
+  ORDER 170
+
+ADD FIELD "lectures-dp" OF "lectures" AS logical 
+  FORMAT "yes/no"
+  INITIAL "no"
+  LABEL "DP"
+  POSITION 19
+  MAX-WIDTH 1
+  ORDER 180
+
+ADD FIELD "lectures-spoken-language" OF "lectures" AS character 
+  FORMAT "x(20)"
+  INITIAL ""
+  LABEL "Spoken Language"
+  POSITION 20
+  MAX-WIDTH 40
+  ORDER 190
+
+ADD FIELD "lectures-duration" OF "lectures" AS integer 
+  FORMAT "->,>>>,>>9"
+  INITIAL "0"
+  LABEL "Duration"
+  POSITION 21
+  MAX-WIDTH 4
+  ORDER 200
+
+ADD FIELD "lectures-thumb" OF "lectures" AS character 
+  FORMAT "x(8)"
+  INITIAL ""
+  LABEL "Thumb"
+  POSITION 22
+  MAX-WIDTH 16
+  ORDER 210
+
+ADD FIELD "lectures-title" OF "lectures" AS character 
+  FORMAT "x(100)"
+  INITIAL ""
+  LABEL "Title"
+  POSITION 23
+  MAX-WIDTH 200
+  ORDER 40
+
+ADD FIELD "http-link" OF "lectures" AS character 
+  FORMAT "x(200)"
+  INITIAL ""
+  LABEL "Http Link"
+  POSITION 24
+  MAX-WIDTH 400
+  ORDER 220
+
+ADD FIELD "sub-count" OF "lectures" AS character 
+  FORMAT "x(8)"
+  INITIAL ""
+  LABEL "Sub Count"
+  POSITION 25
+  MAX-WIDTH 16
+  ORDER 230
+
+ADD FIELD "lectures-filename" OF "lectures" AS character 
+  FORMAT "x(50)"
+  INITIAL ""
+  LABEL "Filename"
+  POSITION 26
+  MAX-WIDTH 40
+  ORDER 240
+
+ADD INDEX "idx" ON "lectures" 
+  AREA "Schema Area"
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "lectures-code" ASCENDING 
+
+ADD TABLE "lectures_default"
+  AREA "Schema Area"
+  LABEL "Lectures Default"
+  DUMP-NAME "lectures_default"
+
+ADD FIELD "src-folder" OF "lectures_default" AS character 
+  FORMAT "x(100)"
+  INITIAL ""
+  LABEL "Source Folder"
+  POSITION 2
+  MAX-WIDTH 200
+  ORDER 10
+
+ADD FIELD "des-folder" OF "lectures_default" AS character 
+  FORMAT "x(100)"
+  INITIAL ""
+  LABEL "Destination Folder"
+  POSITION 3
+  MAX-WIDTH 200
+  ORDER 20
+
+ADD FIELD "cons" OF "lectures_default" AS integer 
+  FORMAT "->,>>>,>>9"
+  INITIAL "0"
+  LABEL "Cons"
+  POSITION 4
+  MAX-WIDTH 4
+  ORDER 30
+
+ADD FIELD "src-folder-temp" OF "lectures_default" AS character 
+  FORMAT "x(100)"
+  INITIAL ""
+  LABEL "Source Folder"
+  POSITION 5
+  MAX-WIDTH 200
+  ORDER 40
+
+ADD FIELD "des-folder-temp" OF "lectures_default" AS character 
+  FORMAT "x(100)"
+  INITIAL ""
+  LABEL "Destination Folder"
+  POSITION 6
+  MAX-WIDTH 200
+  ORDER 50
+
+ADD FIELD "des-folder-srt" OF "lectures_default" AS character 
+  FORMAT "x(100)"
+  INITIAL ""
+  LABEL "Destination Folder SRT"
+  POSITION 7
+  MAX-WIDTH 200
+  ORDER 60
+
+ADD TABLE "lectures_file"
+  AREA "Schema Area"
+  DUMP-NAME "lectures_file"
+
+ADD FIELD "file-num" OF "lectures_file" AS integer 
+  FORMAT "->,>>>,>>9"
+  INITIAL "0"
+  LABEL "File Num"
+  POSITION 2
+  MAX-WIDTH 4
+  ORDER 10
+
+ADD FIELD "file-name" OF "lectures_file" AS character 
+  FORMAT "x(200)"
+  INITIAL ""
+  LABEL "File Name"
+  POSITION 3
+  MAX-WIDTH 400
+  ORDER 20
+
+ADD FIELD "file-path" OF "lectures_file" AS character 
+  FORMAT "x(200)"
+  INITIAL ""
+  LABEL "File Path"
+  POSITION 4
+  MAX-WIDTH 400
+  ORDER 30
+
+ADD FIELD "file-fullname" OF "lectures_file" AS character 
+  FORMAT "x(200)"
+  INITIAL ""
+  LABEL "File Fullname"
+  POSITION 5
+  MAX-WIDTH 400
+  ORDER 40
+
+ADD INDEX "idx" ON "lectures_file" 
+  AREA "Schema Area"
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "file-num" ASCENDING 
+
+ADD TABLE "Lectures_text"
+  AREA "Schema Area"
+  DUMP-NAME "lectures_text"
+
+ADD FIELD "cons" OF "Lectures_text" AS integer 
+  FORMAT "->,>>>,>>9"
+  INITIAL "0"
+  POSITION 2
+  MAX-WIDTH 4
+  ORDER 10
+
+ADD FIELD "english-text" OF "Lectures_text" AS character 
+  FORMAT "x(500)"
+  INITIAL ""
+  LABEL "English Text"
+  POSITION 4
+  MAX-WIDTH 1000
+  ORDER 30
+
+ADD FIELD "IsEmpty" OF "Lectures_text" AS logical 
+  FORMAT "yes/no"
+  INITIAL "no"
+  POSITION 5
+  MAX-WIDTH 1
+  ORDER 40
+
+ADD FIELD "IsTimer" OF "Lectures_text" AS logical 
+  FORMAT "yes/no"
+  INITIAL "no"
+  LABEL "Is Timer"
+  POSITION 6
+  MAX-WIDTH 1
+  ORDER 50
+
+ADD FIELD "IsTimerNum" OF "Lectures_text" AS logical 
+  FORMAT "yes/no"
+  INITIAL "no"
+  POSITION 7
+  MAX-WIDTH 1
+  ORDER 60
+
+ADD FIELD "IsText" OF "Lectures_text" AS logical 
+  FORMAT "yes/no"
+  INITIAL "no"
+  POSITION 8
+  MAX-WIDTH 1
+  ORDER 70
+
+ADD FIELD "tag-text" OF "Lectures_text" AS character 
+  FORMAT "x(500)"
+  INITIAL ""
+  LABEL "Tag Text"
+  POSITION 9
+  MAX-WIDTH 1000
+  ORDER 80
+
+ADD FIELD "hindi-text" OF "Lectures_text" AS character 
+  FORMAT "x(100)"
+  INITIAL ""
+  POSITION 11
+  MAX-WIDTH 200
+  ORDER 100
+
+ADD FIELD "speech-eng" OF "Lectures_text" AS character 
+  FORMAT "x(100)"
+  INITIAL ""
+  LABEL "English Speech"
+  POSITION 12
+  MAX-WIDTH 200
+  ORDER 110
+
+ADD FIELD "speech-hin" OF "Lectures_text" AS character 
+  FORMAT "x(1000)"
+  INITIAL ""
+  LABEL "Hindi Speech"
+  POSITION 13
+  MAX-WIDTH 2000
+  ORDER 120
+
+ADD FIELD "speech-mar" OF "Lectures_text" AS character 
+  FORMAT "x(8)"
+  INITIAL ""
+  LABEL "Marathi Speech"
+  POSITION 14
+  MAX-WIDTH 16
+  ORDER 130
+
+ADD FIELD "speech-multi-lang" OF "Lectures_text" AS character 
+  FORMAT "x(1000)"
+  INITIAL ""
+  LABEL "Multi Lang"
+  POSITION 15
+  MAX-WIDTH 300300
+  EXTENT 150
+  ORDER 140
+
+ADD FIELD "speech-auto-chi-tw" OF "Lectures_text" AS character 
+  FORMAT "x(1000)"
+  INITIAL ""
+  LABEL "Auto Chinese TW"
+  POSITION 16
+  MAX-WIDTH 2000
+  ORDER 150
+
+ADD FIELD "speech-auto-per" OF "Lectures_text" AS character 
+  FORMAT "x(1000)"
+  INITIAL ""
+  LABEL "Auto Persian"
+  POSITION 17
+  MAX-WIDTH 2000
+  ORDER 160
+
+ADD INDEX "idx" ON "Lectures_text" 
+  AREA "Schema Area"
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "cons" ASCENDING 
+
+ADD TABLE "speech_text"
+  AREA "Schema Area"
+  LABEL "Speech Text"
+  DUMP-NAME "speech_text"
+
+ADD FIELD "lectures-code" OF "speech_text" AS integer 
+  FORMAT "->,>>>,>>9"
+  INITIAL "0"
+  LABEL "Code"
+  POSITION 2
+  MAX-WIDTH 4
+  ORDER 10
+
+ADD FIELD "cons" OF "speech_text" AS integer 
+  FORMAT "->,>>>,>>9"
+  INITIAL "0"
+  LABEL "Cons"
+  POSITION 3
+  MAX-WIDTH 4
+  ORDER 20
+
+ADD FIELD "speech-ori-eng" OF "speech_text" AS character 
+  FORMAT "x(100)"
+  INITIAL ""
+  LABEL "English Original Speech"
+  POSITION 4
+  MAX-WIDTH 200
+  ORDER 30
+
+ADD FIELD "speech-ori-hin" OF "speech_text" AS character 
+  FORMAT "x(1000)"
+  INITIAL ""
+  LABEL "Hindi Ori Speech"
+  POSITION 5
+  MAX-WIDTH 2000
+  ORDER 40
+
+ADD FIELD "speech-ori-mar" OF "speech_text" AS character 
+  FORMAT "x(8)"
+  INITIAL ""
+  LABEL "Marathi Ori Speech"
+  POSITION 6
+  MAX-WIDTH 16
+  ORDER 50
+
+ADD FIELD "speech-corr-hin" OF "speech_text" AS character 
+  FORMAT "x(1000)"
+  INITIAL ""
+  LABEL "Speech Corr Hindi"
+  POSITION 7
+  MAX-WIDTH 2000
+  ORDER 60
+
+ADD FIELD "IsEmpty" OF "speech_text" AS logical 
+  FORMAT "yes/no"
+  INITIAL "no"
+  POSITION 8
+  MAX-WIDTH 1
+  ORDER 70
+
+ADD FIELD "IsTimer" OF "speech_text" AS logical 
+  FORMAT "yes/no"
+  INITIAL "no"
+  LABEL "Is Timer"
+  POSITION 9
+  MAX-WIDTH 1
+  ORDER 80
+
+ADD FIELD "IsTimerNum" OF "speech_text" AS logical 
+  FORMAT "yes/no"
+  INITIAL "no"
+  POSITION 10
+  MAX-WIDTH 1
+  ORDER 90
+
+ADD FIELD "IsText" OF "speech_text" AS logical 
+  FORMAT "yes/no"
+  INITIAL "no"
+  POSITION 11
+  MAX-WIDTH 1
+  ORDER 100
+
+ADD FIELD "tag-text" OF "speech_text" AS character 
+  FORMAT "x(500)"
+  INITIAL ""
+  LABEL "Tag Text"
+  POSITION 12
+  MAX-WIDTH 1000
+  ORDER 110
+
+ADD FIELD "speech-auto-guj" OF "speech_text" AS character 
+  FORMAT "x(1000)"
+  INITIAL ""
+  LABEL "Auto Gujarati"
+  POSITION 13
+  MAX-WIDTH 2000
+  ORDER 120
+
+ADD FIELD "speech-auto-mar" OF "speech_text" AS character 
+  FORMAT "x(1000)"
+  INITIAL ""
+  LABEL "Auto Gujarati"
+  POSITION 14
+  MAX-WIDTH 2000
+  ORDER 130
+
+ADD FIELD "speech-auto-tag" OF "speech_text" AS character 
+  FORMAT "x(1000)"
+  INITIAL ""
+  LABEL "Auto Gujarati"
+  POSITION 15
+  MAX-WIDTH 2000
+  ORDER 140
+
+ADD FIELD "speech-auto-spa" OF "speech_text" AS character 
+  FORMAT "x(1000)"
+  INITIAL ""
+  LABEL "Auto Spanish"
+  POSITION 16
+  MAX-WIDTH 2000
+  ORDER 150
+
+ADD FIELD "speech-auto-kan" OF "speech_text" AS character 
+  FORMAT "x(1000)"
+  INITIAL ""
+  LABEL "Auto Kannada"
+  POSITION 17
+  MAX-WIDTH 2000
+  ORDER 160
+
+ADD FIELD "speech-auto-tam" OF "speech_text" AS character 
+  FORMAT "x(1000)"
+  INITIAL ""
+  LABEL "Auto Tamil"
+  POSITION 18
+  MAX-WIDTH 2000
+  ORDER 170
+
+ADD FIELD "speech-auto-chi-cn" OF "speech_text" AS character 
+  FORMAT "x(1000)"
+  INITIAL ""
+  LABEL "Auto Chinese CN"
+  POSITION 19
+  MAX-WIDTH 2000
+  ORDER 180
+
+ADD FIELD "speech-auto-chi-tw" OF "speech_text" AS character 
+  FORMAT "x(1000)"
+  INITIAL ""
+  LABEL "Auto Chinese TW"
+  POSITION 20
+  MAX-WIDTH 2000
+  ORDER 190
+
+ADD FIELD "speech-auto-per" OF "speech_text" AS character 
+  FORMAT "x(1000)"
+  INITIAL ""
+  LABEL "Auto Persian"
+  POSITION 21
+  MAX-WIDTH 2000
+  ORDER 200
+
+ADD FIELD "time-from" OF "speech_text" AS character 
+  FORMAT "x(15)"
+  INITIAL ""
+  LABEL "Time From"
+  POSITION 22
+  MAX-WIDTH 30
+  ORDER 210
+
+ADD FIELD "time-to" OF "speech_text" AS character 
+  FORMAT "x(15)"
+  INITIAL ""
+  LABEL "Time To"
+  POSITION 23
+  MAX-WIDTH 16
+  ORDER 220
+
+ADD FIELD "srt-num" OF "speech_text" AS integer 
+  FORMAT "->,>>>,>>9"
+  INITIAL "0"
+  LABEL "Srt No"
+  POSITION 24
+  MAX-WIDTH 4
+  ORDER 230
+
+ADD FIELD "srt-timing" OF "speech_text" AS character 
+  FORMAT "x(30)"
+  INITIAL ""
+  LABEL "Timing"
+  POSITION 25
+  MAX-WIDTH 60
+  ORDER 240
+
+ADD INDEX "idx" ON "speech_text" 
+  AREA "Schema Area"
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "lectures-code" ASCENDING 
+  INDEX-FIELD "cons" ASCENDING 
+
+.
+PSC
+cpstream=utf-8
+.
+0000012591

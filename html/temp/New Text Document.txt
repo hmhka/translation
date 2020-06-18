@@ -1,0 +1,16 @@
+<html> 
+<head> 
+<title>West Star - Sales Statistics</title> 
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   <script type="text/javascript"> 
+     google.charts.load('current', { packages: ['corechart'] }); 
+   </script> 
+</head> 
+<body> 
+
+{
+  "q": "The Great Pyramid of Giza (also known as the Pyramid of Khufu or the Pyramid of Cheops) is the oldest and largest of the three pyramids in the Giza pyramid complex.",
+  "source": "en",
+  "target": "es",
+  "format": "text"
+}

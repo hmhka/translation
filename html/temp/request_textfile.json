@@ -1,0 +1,21 @@
+{
+  "sourceLanguageCode": "en",
+  "targetLanguageCodes": ["es", "fr"],
+  "inputConfigs": [
+   {
+      "gcsSource": {
+        "inputUri": "C:\pvr\translation\html\Lecture_es.txt"
+      }
+    },
+    {
+      "gcsSource": {
+        "inputUri": "C:\pvr\translation\html\Lecture_fr.txt"
+      }
+    }
+  ],
+  "outputConfig": {
+      "gcsDestination": {
+        "outputUriPrefix": "C:\pvr\translation\html\"
+      }
+   }
+}

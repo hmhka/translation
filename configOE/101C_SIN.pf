@@ -1,0 +1,53 @@
+#-db S:\pvr\bds10\smnd_set.db  -1
+#-db S:\pvr\bds10\smnd_itm.db  -1
+-db C:\pvr\translation\db\smndsy.db    -1
+#-db S:\pvr\bds10\aud_sys.db   -1
+#-db S:\pvr\bds10\tally9.db    -1
+#-db bank.db      -N  TCP -S  10108 -H server5b
+#-db smnd_task.db -N  TCP -S  10106 -H server5b
+#-db smnd_inv.db  -N  TCP -S  10107 -H server5b
+
+
+-p _ab.p
+# -stream ISO8859-1
+-cpinternal utf-8
+-stream utf-8
+-Mm          8192
+-T         c:\tmp
+-inp        32000 
+-tok       100000
+-nb           255
+-n             50
+-bibufs        25
+-spin      200000
+-s       42428781 
+-mmax        4096
+-h 		6
+# –TB 31  
+# –TM 32 
+
+# -L         450000
+# -s       42428781
+# -B         400000
+# -Mr          8192
+# -aibufs        12
+# -inp        32000 
+# -d            mdy 
+# -rand           2   
+# -Bt         10000
+# -B         150000
+# -mmax        2048
+# -Mr          8192
+# -s       42428781
+# -stsh           5
+# -TB            32
+# -TM            32
+# -T         c:\tmp
+# -nb           154
+# -tok       100000
+# -bibufs        25
+# -aibufs        12
+# -spin       80000 
+# -L           4500
+# -tok       100000
+# Base de datos , protocolo , servicio , host , ruta trigger, cache

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "shrimataji-lectu-1591255492283",
+  "private_key_id": "7e137546e6c8605f46bc40623f0714ccbcb840d9",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC9fG6sAFatsjuC\nFBNb5uWJpisoK0EY7r16C/Ah/aSruBMyN8CH9Zs8VKIlX+K/bbONhJhlZb+CSeFJ\nFtHz6Icn4CPobdR4YGGHGK6DamcAltJC36arSCiX+Ew8KRMIpbnQzNVMge5tp0j8\nHSjWbpTIzu48q86vYd1yKCUpY0uJFNGvWWM7enx8x7uzVIKkcA1TtnkbrB1vobVl\nPu7AtZ84d5Txhq5h8J2VavxIqPIOFFUsdizonjNiGIgxG7DmjSnsWyMjYYO3UYno\nrSLfb0icWKb5H7psYYa46dfzwqZl+ofYJgJKmy9VrBEwz2p0EQ7D4NdIVhGiImzj\nvYf4FLxnAgMBAAECggEABv1bkcGzcNXVxx8ZdbbnObQk/GbYEGTiHWnqUj6qf+Ea\n6CvRUNKZBtkyYAGQ+jHAQVSmUHs33MT/5/PNC9vEfI6SlITUpRodDuA0s8lNgmKN\n4ASi/8d6I9z3ZvK27oc6ev7LUXarhmT41r/2nS5YE646cId/6M1J32ems0ej5isL\nrEclJW6gldP7RSswgNSZ/HmpuX3mz2Qf6t98dFZf74QxAZEV3pyTJW3m13gWuIhp\n11g3cRqhhHnfEHtUy8ufrocDe20FBdUuKvoZZ4o6XvkA7p0l3cOJ9ZE2czMPnsFQ\nMkfZYoxWnl1W9ARRiIp5CVLVREozmOil5kMcZhsYgQKBgQDk4dXMdtxstqiHBvLe\n1szQoHW+W6ISJK/IBbk4PVksBmpdIpbjRqec0weGW6O+y/8LvQ3n9j9y3M3PuRBE\ntV6+udDLl0Os3hVRgEAjhSKCh56aLQi3aqTl2TZU2NpZolh/w4VGmHEt1r9gEKIs\n4KAkFzQ74xpBwqGcPwfCj7L8gQKBgQDT768sLVFx8V9rneDNDA0mqoAxLUGNxtk4\nnIcbm66YYELZ58/tBmB795huogBcpmdr4GQA0pgUv5k8sZv9/tZDk62NB80ZoXXT\nr4Fymqtz8EJmNnPUlNWYjMSBocNPD3Xg8U6lu9Rs53/1IArEPFeZhyYBaWt5+x2c\nti55TLDk5wKBgA30pzCcXrxSNtxk1BI6Tqq53fQJakxo6D7t+mkvdGx2x61+Gm0p\nNbceNus+UzGjBp4UnPBz11KNnA76Xb+Sv4ApnE2Nn5a+w9YAV+jSiVQkKMuFy25D\nlmJdaC6sOkQU3giMR2gSi3QcD/cvjHPoDluk/o5YPpWb5Ha+cR6v3F4BAoGBAKNu\nj5z3jXjac4TfiH1Wr8WDcbt6dLTKBLR9MEr/8NGcWbED6/mSE1FFi4y07KaFw/cS\nYMupmpFVduuw4uQpYj1WYl0BCQ6czenhy2b/Evwi6HE9yHDEHTq4QsjcX2pWN8ax\nDr8LazJYCvqSLPtKtRq1d39bNgAov5sbehccJsU9AoGBAJr1EkyjsAoOdPE6SWko\nulr+Fl0jS/kDhbdn9NfPT9jkJLwCugeYPcOgODROGyZblZi/LkqYXZYTaO000eQH\nYNukBnM2wf9dDGm1GoXXNcwKCzUk3gOPZY89AJDOsdwyZgHkbArEjOS1GQcNJ3em\nuVBdKkXyvz25AijeLnj9HLg0\n-----END PRIVATE KEY-----\n",
+  "client_email": "starting-account-lbbcy1m8vodl@shrimataji-lectu-1591255492283.iam.gserviceaccount.com",
+  "client_id": "115815163442099399664",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/starting-account-lbbcy1m8vodl%40shrimataji-lectu-1591255492283.iam.gserviceaccount.com"
+}
