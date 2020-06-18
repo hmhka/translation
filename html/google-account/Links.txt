@@ -1,4 +1,0 @@
-https://cloud.google.com/translate/docs/basic/setup-basic
-https://cloud.google.com/sdk/docs
-https://console.developers.google.com/billing/0195D6-0A293C-CFD62C?authuser=0&project=shrimataji-lectu-1591255492283
-
